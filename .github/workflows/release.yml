@@ -15,6 +15,6 @@ jobs:
           token: ${{ secrets.PAT }}
           repository: ${{ github.repository_owner }}/Submitty
           client-payload: >
-            { "repo_name": ${{ github.event.repository.name }},
-            "repo_url": ${{ github.event.repository.url }}
-            "tag": ${{ github.event.release.tag_name }} }
+            { "repo_name": "${{ github.event.repository.name }}",
+            "repo_url": "${{ github.event.repository.url }}"
+            "tag": "${{ github.event.release.tag_name }}" }
