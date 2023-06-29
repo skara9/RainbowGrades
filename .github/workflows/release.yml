@@ -14,7 +14,8 @@ jobs:
           event-type: repo-release
           token: ${{ secrets.PAT }}
           repository: ${{ github.repository_owner }}/Submitty
-          client-payload: >
-            { "repo_name": ${{ toJSON(github.event.repository.name) }},
-            "repo": ${{ toJSON(github.event.repository.full_name) }},
-            "tag": ${{ toJSON(github.event.release.tag_name) }} }
+          client-payload: '{
+              "repo_name": ${{ toJSON(github.event.repository.name) }},
+              "repo": ${{ toJSON(github.event.repository.full_name) }},
+              "tag": ${{ toJSON(github.event.release.tag_name) }}
+            }'
