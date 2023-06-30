@@ -9,7 +9,8 @@ jobs:
     name: Dispatch Update
     runs-on: ubuntu-latest
     steps:
-      - if: ${{ github.repository_owner == 'Submitty' }}
+      - name: Send request
+        if: ${{ github.repository_owner == 'Submitty' }}
         run: >
           curl -L
           -X POST
